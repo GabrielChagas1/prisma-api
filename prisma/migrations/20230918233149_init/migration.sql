@@ -8,3 +8,16 @@ CREATE TABLE "user" (
 
     CONSTRAINT "user_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateTable
+CREATE TABLE "post" (
+    "id" SERIAL NOT NULL,
+    "published" BOOLEAN NOT NULL DEFAULT false,
+    "title" VARCHAR(255) NOT NULL,
+    "content" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "authorId" INTEGER,
+
+    CONSTRAINT "post_pkey" PRIMARY KEY ("id")
+);
