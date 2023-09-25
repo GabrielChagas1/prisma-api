@@ -7,4 +7,5 @@ describe('PrismaService', () => {
       providers: [PrismaService],
     }).compile();
     service = module.get<PrismaService>(PrismaService);
+  it('should be defined', () => {
   });
